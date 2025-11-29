@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondavus Trade - Global Trade Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .modern-gradient {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, 0px); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .logo-glow {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+    <!-- Modern Navigation -->
+    <nav class="header-gradient sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
+                <div class="flex items-center space-x-3">
+                    <div class="relative">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center pulse">
+                            <i class="fas fa-globe text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white logo-glow">Mondavus Trade</h1>
+                        <p class="text-xs text-indigo-200 font-medium">Global Trade Solutions</p>
+                    </div>
+                </div>
+                
+                <!-- Status Indicator -->
+                <div class="hidden md:flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm text-indigo-200 font-medium">Global Operations Active</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Progress Bar -->
+        <div class="h-1 w-full bg-gray-800">
+            <div class="h-1 bg-gradient-to-r from-indigo-500 to-purple-600 w-1/3 animate-pulse"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                        Global Trade
+                        <span class="gradient-text">Reimagined</span>
+                    </h1>
+                    <p class="mt-8 text-xl text-gray-600 max-w-lg">
+                        Mondavus Trade revolutionizes international commerce with innovative solutions that connect markets, streamline processes, and unlock new opportunities worldwide.
+                    </p>
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-globe text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700 text-lg">Global Network</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-purple-600"></i>
+                            </div>
+                            <span class="text-gray-700 text-lg">Market Intelligence</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-shipping-fast text-pink-600"></i>
+                            </div>
+                            <span class="text-gray-700 text-lg">Logistics Solutions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-file-contract text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700 text-lg">Compliance Expertise</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative fade-in">
+                    <div class="modern-gradient rounded-3xl h-96 md:h-[500px] flex items-center justify-center floating">
+                        <div class="text-white text-center p-12">
+                            <i class="fas fa-globe-americas text-6xl mb-6"></i>
+                            <h3 class="text-3xl font-bold mb-6">Connecting Global Markets</h3>
+                            <p class="text-indigo-100 text-lg">Across continents and industries with innovative trade solutions</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div class="absolute -top-8 -right-8 w-32 h-32 bg-green-400 rounded-full opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 modern-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Global Impact</h2>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+                    With over a decade of experience, Mondavus Trade has established itself as a leader in global commerce solutions
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="fade-in">
+                    <p class="text-5xl md:text-6xl font-bold">150+</p>
+                    <p class="mt-4 text-indigo-100 text-lg">Countries Reached</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-5xl md:text-6xl font-bold">5,000+</p>
+                    <p class="mt-4 text-indigo-100 text-lg">Business Partners</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-5xl md:text-6xl font-bold">$2.5B+</p>
+                    <p class="mt-4 text-indigo-100 text-lg">Trade Volume</p>
+                </div>
+                <div class="fade-in">
+                    <p class="text-5xl md:text-6xl font-bold">15+</p>
+                    <p class="mt-4 text-indigo-100 text-lg">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Trade Solutions</h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide end-to-end solutions for all your international trade needs, from market entry to logistics and compliance
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-file-import text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Global Import & Export</h3>
+                    <p class="text-gray-600 text-lg">
+                        Streamlined import and export processes with minimized paperwork and maximum efficiency across global markets.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-shield-alt text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Compliance & Regulations</h3>
+                    <p class="text-gray-600 text-lg">
+                        Navigating complex international trade regulations and ensuring full compliance across all markets.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-chart-bar text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Market Intelligence</h3>
+                    <p class="text-gray-600 text-lg">
+                        In-depth market research and analysis to identify new opportunities and emerging global trends.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-truck-loading text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Supply Chain Management</h3>
+                    <p class="text-gray-600 text-lg">
+                        End-to-end supply chain solutions ensuring efficient movement of goods across international borders.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-handshake text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Strategic Partnerships</h3>
+                    <p class="text-gray-600 text-lg">
+                        Establishing and managing strategic partnerships to expand your global market presence.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-balance-scale text-3xl gradient-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Risk Management</h3>
+                    <p class="text-gray-600 text-lg">
+                        Comprehensive risk assessment and management strategies for international trade operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Network Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Our Global Network</h2>
+                    <p class="text-xl text-gray-600 mb-10">
+                        With strategic partnerships across six continents, Mondavus Trade provides unparalleled access to emerging and established markets worldwide.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mt-1 mr-4">
+                                <i class="fas fa-handshake text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-xl">Strategic Partnerships</h4>
+                                <p class="text-gray-600 text-lg mt-2">Established relationships with key players in major trade hubs across the globe</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mt-1 mr-4">
+                                <i class="fas fa-users text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-xl">Local Expertise</h4>
+                                <p class="text-gray-600 text-lg mt-2">On-the-ground knowledge and cultural understanding in every market we serve</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mt-1 mr-4">
+                                <i class="fas fa-chart-line text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-xl">Market Intelligence</h4>
+                                <p class="text-gray-600 text-lg mt-2">Real-time insights into market trends, regulations, and emerging opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative fade-in">
+                    <div class="modern-gradient rounded-3xl h-96 md:h-[500px] flex items-center justify-center">
+                        <div class="text-white text-center p-12">
+                            <i class="fas fa-network-wired text-6xl mb-6"></i>
+                            <h3 class="text-3xl font-bold mb-6">Global Reach</h3>
+                            <p class="text-indigo-100 text-lg">Connecting markets across the world with innovative trade solutions</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div class="absolute -top-8 -right-8 w-32 h-32 bg-green-400 rounded-full opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Mondavus Trade provides specialized solutions for diverse industries with unique international trade requirements
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Technology & Electronics</h3>
+                    <p class="text-gray-600">Global distribution of cutting-edge technology products and components</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Healthcare & Pharmaceuticals</h3>
+                    <p class="text-gray-600">Regulatory compliance and global distribution of medical products</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Financial Services</h3>
+                    <p class="text-gray-600">Cross-border financial transactions and trade financing solutions</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-industry text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Manufacturing</h3>
+                    <p class="text-gray-600">Supply chain optimization for industrial and consumer goods</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Consumer Goods</h3>
+                    <p class="text-gray-600">Global distribution and retail partnerships for consumer products</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Energy & Resources</h3>
+                    <p class="text-gray-600">Commodity trading and resource distribution across global markets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section -->
+    <section class="py-24 modern-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Expanding Global Commerce</h2>
+            <p class="text-2xl text-indigo-100 max-w-4xl mx-auto">
+                Mondavus Trade continues to pioneer new pathways in international trade, connecting businesses and markets across the globe with innovative solutions and unparalleled expertise.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Fade in animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            // Initial check
+            fadeInOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
+</body>
+</html>
